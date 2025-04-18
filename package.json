@@ -1,6 +1,6 @@
 {
-  "name": "lightschema",
-  "version": "0.1.0",
+  "name": "lightv-schema",
+  "version": "0.0.1",
   "description": "A lightweight schema validation library for TypeScript.",
   "module": "src/index.ts",
   "type": "module",

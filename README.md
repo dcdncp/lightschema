@@ -1,6 +1,6 @@
-# LightSchema
+# LightvSchema
 
-LightSchema is a lightweight schema validation library for TypeScript. It provides a simple and efficient way to validate data structures.
+LightvSchema is a lightweight schema validation library for TypeScript. It provides a simple and efficient way to validate data structures.
 
 ## Features
 
@@ -15,24 +15,24 @@ This library is my educational project. It is not intended for production use. U
 
 ## Installation
 
-You can install LightSchema using npm or bun:
+You can install LightvSchema using npm or bun:
 
 ```bash
-npm install lightscheme
+npm install lightv-schema
 ```
 
 or
 
 ```bash
-bun add lightscheme
+bun add lightv-schema
 ```
 
 ## Usage
 
-LightSchema provides a simple API for defining and validating data structures. Here's a quick example:
+LightvSchema provides a simple API for defining and validating data structures. Here's a quick example:
 
 ```typescript
-import { type, transform, validate, parse } from "lightscheme";
+import { type, transform, validate, parse } from "lightv-schema";
 
 const User = type.Object({
   id: type.Int(),
@@ -72,8 +72,8 @@ export { type, transform, validate, parse };
 Also easy to extend:
 
 ```typescript
-import type { Scheme } from "lightscheme/scheme";
-import { validate } from "lightscheme";
+import type { Scheme } from "lightv-schema/scheme";
+import { validate } from "lightv-schema";
 
 export function Min<const Item extends Scheme>(
   item: Item,
