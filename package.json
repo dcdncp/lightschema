@@ -1,6 +1,6 @@
 {
   "name": "lightv-schema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight schema validation library for TypeScript.",
   "module": "src/index.ts",
   "type": "module",
@@ -21,9 +21,9 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./scheme": {
-      "types": "./dist/scheme.d.ts",
-      "import": "./dist/scheme.js"
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "import": "./dist/schema.js"
     }
   },
   "devDependencies": {
