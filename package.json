@@ -1,6 +1,6 @@
 {
   "name": "lightv-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight schema validation library for TypeScript.",
   "module": "src/index.ts",
   "type": "module",
@@ -11,7 +11,7 @@
     "dist/*.d.ts"
   ],
   "scripts": {
-    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build": "bun build --target=node ./src/index.ts ./src/schema.ts --outdir=dist && bun run build:declaration",
     "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
     "postbuild": "rimraf tsconfig.types.tsbuildinfo"
   },
@@ -22,7 +22,8 @@
       "types": "./dist/index.d.ts"
     },
     "./scheme": {
-      "types": "./dist/scheme.d.ts"
+      "types": "./dist/scheme.d.ts",
+      "import": "./dist/scheme.js"
     }
   },
   "devDependencies": {
