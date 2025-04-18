@@ -1,0 +1,34 @@
+{
+  "name": "lightschema",
+  "version": "0.1.0",
+  "description": "A lightweight schema validation library for TypeScript.",
+  "module": "src/index.ts",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ],
+  "scripts": {
+    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "postbuild": "rimraf tsconfig.types.tsbuildinfo"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./scheme": {
+      "types": "./dist/scheme.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
