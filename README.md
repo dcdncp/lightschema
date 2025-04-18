@@ -65,17 +65,15 @@ if ("success" in result) {
 } else {
   console.log("Failed to parse user:", result.failure);
 }
-
-export { type, transform, validate, parse };
 ```
 
 Also easy to extend:
 
 ```typescript
-import type { Scheme } from "lightv-schema/scheme";
+import type { Schema } from "lightv-schema/schema";
 import { validate } from "lightv-schema";
 
-export function Min<const Item extends Scheme>(
+export function Min<const Item extends Schema>(
   item: Item,
   min: number,
   message?: string
